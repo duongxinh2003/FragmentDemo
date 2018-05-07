@@ -1,0 +1,1 @@
+Create Fragment, ViewPager and DialogFragment

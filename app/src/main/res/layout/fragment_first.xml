@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="firstFragViewModel"
+            type="com.fu.fragmentdemo.FirstFragmentViewModel"/>
+    </data>
+    <RelativeLayout
+        android:background="@color/colorFlowerBlue"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="phunx04318.fpt.edu.vn.fragmentdemo.BlankFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+            android:textSize="24sp"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite"
+            android:text="FIRST FRAGMENT" />
+
+    </RelativeLayout>
+</layout>
