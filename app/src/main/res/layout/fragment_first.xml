@@ -5,21 +5,32 @@
         <variable
             name="firstFragViewModel"
             type="com.fu.fragmentdemo.FirstFragmentViewModel"/>
+        <variable
+            name="presenter"
+            type="com.fu.fragmentdemo.FirstFragment"/>
     </data>
     <RelativeLayout
         android:background="@color/colorFlowerBlue"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="phunx04318.fpt.edu.vn.fragmentdemo.BlankFragment">
+        tools:context="com.fu.fragmentdemo.FirstFragment">
 
         <!-- TODO: Update blank fragment layout -->
         <TextView
+            android:id="@+id/txtShow1"
             android:textSize="24sp"
             android:layout_centerInParent="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/colorWhite"
             android:text="FIRST FRAGMENT" />
-
+        <Button
+            android:id="@+id/btnClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtShow1"
+            android:layout_centerInParent="true"
+            android:text="Show"
+            android:onClick="@{() -> presenter.onClick()}"/>
     </RelativeLayout>
 </layout>

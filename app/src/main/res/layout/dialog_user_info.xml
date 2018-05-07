@@ -4,41 +4,65 @@
         <variable
             name="userViewModel"
             type="com.fu.fragmentdemo.FirstFragmentViewModel"/>
+        <variable
+            name="presenter"
+            type="com.fu.fragmentdemo.UserInfoDialog"/>
     </data>
-    <LinearLayout
-        android:orientation="vertical"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="100dp">
         <TextView
-            android:id="@+id/txtName"
-            android:textSize="16sp"
-            android:textColor="@color/colorBlack"
+            android:id="@+id/txtDialog"
+            android:layout_centerHorizontal="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{userViewModel.name}"/>
-        <TextView
-            android:id="@+id/txtNumber"
             android:textSize="16sp"
             android:textColor="@color/colorBlack"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@{userViewModel.number}"/>
-        <LinearLayout
-            android:orientation="horizontal"
+            android:text="DIALOG"/>
+        <RelativeLayout
+            android:layout_below="@+id/txtDialog"
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <Button
-                android:layout_weight="1"
-                android:id="@+id/btnUpdate"
+            android:layout_height="match_parent">
+            <!--<TextView-->
+                <!--android:id="@+id/txtName"-->
+                <!--android:textSize="16sp"-->
+                <!--android:textColor="@color/colorBlack"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@{userViewModel.name}"/>-->
+            <!--<TextView-->
+                <!--android:id="@+id/txtNumber"-->
+                <!--android:textSize="16sp"-->
+                <!--android:textColor="@color/colorBlack"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@{userViewModel.number}"/>-->
+            <TextView
+                android:id="@+id/txtDes"
+                android:layout_centerHorizontal="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Update"/>
-            <Button
-                android:layout_weight="1"
-                android:id="@+id/btnClose"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Close" />
-        </LinearLayout>
-    </LinearLayout>
+                android:text="This is DilalogFragment"/>
+            <LinearLayout
+                android:layout_below="@+id/txtDes"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:layout_weight="1"
+                    android:id="@+id/btnUpdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Update"/>
+                <Button
+                    android:layout_weight="1"
+                    android:id="@+id/btnClose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Close"
+                    android:onClick="onCancel"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
 </layout>
